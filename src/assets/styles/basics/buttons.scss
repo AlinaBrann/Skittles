@@ -1,0 +1,120 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    min-width: rem(140px);
+    height: rem(42px);
+    cursor: pointer;
+    text-align: center;
+    font-family: "Helvetica-Bold";
+    font-size: rem(20px);
+    padding: 0 rem(13px);
+    line-height: 1;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    border-radius: rem(30px);
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        animation: jump 0.7s ease 1 alternate ;
+    }
+    &.loading {
+        pointer-events: none;
+        opacity: 0.8;
+    }
+    &--primary {
+        color: #FFF;
+        background: $red;
+        border: 2px solid $red;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        // min-width: 145px;
+    }
+
+    // &--default {
+
+    // }
+
+    &--primary:hover {
+        animation: jump 0.7s ease 1 alternate ;
+    }
+
+    &--lg {
+        font-size: 21px;
+        padding: 17px 44px 16px;
+        border-width: 3px;
+    }
+
+    &--secondary  {
+        background: #FFF;
+        border: 2px solid #FFF;
+        color: $red;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    &--secondary:hover {
+        background-color: $red;
+        color: #FFF;
+        animation: jump 0.7s ease 1 alternate ;
+    }
+
+    &--save {
+        color: #FFFFFF;
+        font-size: 13px;
+        text-transform: uppercase;
+        background: #56A956;
+        border-radius: 40px;
+        padding: 5px 15px;
+    }
+    &--save:hover {
+        opacity: 0.8;
+    }
+
+    &--cancel {
+        color: #FFFFFF;
+        font-size: 13px;
+        text-transform: uppercase;
+        background: #BFD5E0;
+        border-radius: 40px;
+        padding: 5px 15px;
+    }
+    &--cancel:hover {
+        opacity: 0.8;
+    }
+
+    &--default {
+        color: #912982;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 1;
+        white-space: nowrap;
+        text-transform: uppercase;
+        padding: 17px 46px 13px;
+        border: 2px solid #FFF;
+        background: #FFF;
+        border-radius: 40px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    &--default:hover {
+        color: #FFF;
+        background-color: transparent;
+    }
+
+    &--sm {
+        padding: 7px 23px 6px;
+    }
+    @media (min-width: $sm) {
+        &--secondary {
+            box-shadow: none;
+        }
+    }
+    @media (max-width: 1023px) {
+        &--lg {
+            font-size: 18px;
+            padding: 16px 25px 10px;
+        }
+    }
+}
